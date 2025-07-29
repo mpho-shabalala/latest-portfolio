@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Base Reset & Defaults === */
+@layer base {
+  html {
+    @apply scroll-smooth p-0 m-0 text-gray-800;
+  }
+
+  body{
+    @apply relative p-0 m-0 font-sans ;
+  }
+
+  header{
+    @apply flex justify-center items-center  w-full max-h-20 fixed top-0 left-0 my-2;
+  }
+
+  .container{
+    @apply w-full max-w-container mx-auto ;
+  }
+
+  .mini-img{
+    @apply h-10 w-10 rounded-full;
+  }
+
+
+  /*
+   * header styles
+   */
+  .header-nav{
+    @apply flex justify-between items-center p-1 min-h-full border-gray-200 border rounded-full w-96 w-header-nav bg-white z-50;
+  }
+
+  .header-nav-links{
+    @apply hidden md:flex space-x-8 text-gray-800 dark:text-gray-100
+  }
+
+  .active-nav{
+    @apply text-brand-purple font-semibold
+  }
+
+  .hover-nav{
+    @apply hover:text-brand-purple
+  }
+
+  
+
+  .dark-header-nav-link{
+    @apply py-2 px-4 bg-black text-white rounded-full hover:bg-gray-600 hidden md:flex
+  }
+
+  .mobile-menu{
+    @apply md:hidden text-gray-800 dark:text-gray-100
+  }
+
+  /* hero styles */
+
+  .hero{
+    @apply flex h-screen;
+  }
+
+  .hero-container{
+    @apply w-1/3  
+  }
+
+  .hero-container:nth-child(3) > *{
+    @apply items-end text-end
+  }
+
+  .hero-container-top-div{
+    @apply h-2/5
+  }
+
+  .hero-container-bottom-div{
+    @apply h-3/5
+  }
+
+  #hero-container-top-left-div{
+    @apply flex flex-col justify-end 
+  }
+
+  .hero-text-sm{
+    @apply font-medium text-2xl
+  }
+
+  .hero-text-lg{
+    @apply font-extrabold text-9xl 
+  }
+
+  .hero-text-xsm{
+    @apply text-end
+  }
+
+  #middle-hero-container{
+    @apply flex flex-col justify-center -z-10
+  }
+
+  #img-displayer-div{
+    @apply relative
+  }
+
+  #my-img-display{
+    @apply rounded-2xl w-full h-full
+  }
+
+  #img-displayer-div > P{
+    @apply absolute -bottom-10 -left-10 bg-brand-purple  px-8 py-7 rounded-full text-3xl  text-white
+  }
+
+
+  /*
+    ABOUT ME
+  */
+
+  .about-me-section{
+    @apply h-screen w-full flex 
+  }
+
+  .about-me-div{
+    @apply w-1/2 flex flex-col justify-center
+  }
+
+  
+  #about-me-text-div > h1{
+    @apply text-6xl font-extrabold mb-6
+  }
+
+  #about-me-text-div > p{
+    @apply leading-relaxed space-y-5 text-lg
+  }
+
+   #about-me-text-div > h2{
+    @apply text-3xl font-bold mb-3
+  }
+
+  #about-me-stats{
+    @apply flex w-full justify-between my-8
+  }
+
+  #about-me-img-div{
+    @apply flex flex-row justify-end ;
+  }
+
+  #about-me-stats > li > h2{
+    @apply text-brand-purple font-bold text-6xl
+  }
+
+  #about-me-stats > li > p{
+    @apply font-bold
+  }
+
+  #contacts{
+    @apply flex mb-6
+  }
+
+  #contacts > li{
+    @apply w-1/3
+  }
+
+   #contacts > li p{
+    @apply font-bold
+  }
+
+   #contacts > li > a{
+    @apply hover:text-brand-purple
+  }
+
+
+
+  #about-me-img-display{
+    @apply h-3/5 w-4/5 rounded-xl
+  }
+
+  #media-links{
+    @apply flex my-3
+  }
+
+  #github-link{
+    @apply mx-4
+  }
+
+  #about-me-img-div{
+    @apply items-center 
+  }
+
+  /* what I do */
+
+  #what-i-do-section{
+    @apply flex h-screen items-center
+  }
+
+  #what-i-do-accordion-div{
+    @apply w-3/5
+  }
+
+  #what-i-do-img-div{
+    @apply w-2/5
+  }
+
+  #what-i-do-accordion-div > div > h2{
+    @apply text-4xl font-bold
+  }
+
+  #what-i-do-accordion-div > div > p{
+    @apply my-6
+  }
+
+  .what-i-do-item > button{
+    @apply flex justify-between  w-full text-2xl font-medium p-4 pl-0
+  }
+}

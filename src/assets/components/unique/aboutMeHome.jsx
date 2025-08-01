@@ -77,9 +77,7 @@ export default function About(){
                         </li>
                     </ul>
 
-                    <SecondaryBTN>
-                      MY STORY
-                    </SecondaryBTN>
+                    <SecondaryBTN text="MY STORY"/>
 
             </div>
             <div className='about-me-div' id='about-me-img-div' >

@@ -15,7 +15,7 @@ export default function Projects() {
             <h1 className="text-6xl font-extrabold">FEATURED PROJECTS</h1>
             <p className="my-8">These selected projects reflect my passion for blending modularity, scalability, and reusability with creative problem-solving. Each codebase is designed with future adaptability in mind — a balance of complexity management and thoughtful architecture that solves real-world challenges.</p>
         </div>
-        <div className="h-[400vh]" //adjust the viewport height according to the number of projects
+        <div className="h-[300vh]" //adjust the viewport height according to the number of projects
         >
       {projects.map((project, i) => (
         <ProjectCard key={i} url={project.url} title={project.title} imageUrl={project.imageUrl} index={i} />

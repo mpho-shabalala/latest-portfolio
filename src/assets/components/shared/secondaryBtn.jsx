@@ -1,10 +1,11 @@
 
 
-export default function SecondaryBTN({text}){
+export default function SecondaryBTN({type, text, href}){
     return (
         <a
-            href="#"
-            className="border border-brand-purple text-brand-purple font-semibold mt-4 px-8 py-2 rounded-full w-fit text-2xl group"
+            href={href}
+            type={type || ''}
+            className="bg-brand-purple w-full text-white md:text-brand-purple md:bg-white border border-brand-purple font-semibold  px-8 py-2 rounded-full md:w-fit text-2xl  text-center"
         >
             {text}
         </a>

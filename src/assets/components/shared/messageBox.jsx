@@ -2,8 +2,8 @@ import React from "react"
 
 export default function MessageBox({ label, value, onChange, placeholder, rows = 4 }) {
   return (
-    <div className="flex flex-col   space-y-2">
-      {label && <label className=" text-sm font-medium text-brand-purple">{label}</label>}
+    <div className="flex flex-col space-y-2">
+      {label && <label className=" text-sm my-4 text-brand-purple">{label}</label>}
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value)}

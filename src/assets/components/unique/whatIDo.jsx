@@ -14,14 +14,14 @@ export default function WhatIDo() {
   };
 
   return (
-    <div id='what-i-do-section' className="flex flex-col md:flex-row gap-8 px-4 py-10">
-      <div className='what-i-do-div' id='what-i-do-img-div'>
+    <div id='' className="flex flex-col md:flex-row gap-8 px-4 py-10 md:h-screen items-center">
+      <div className='what-i-do-div w-2/5 hidden md:block'>
         <img src={laptop} alt="Laptop showing work" className="w-full h-auto rounded-xl" />
       </div>
 
-      <div id="what-i-do-accordion-div" className="flex-1">
+      <div  className="flex-1  w-full md:w-3/5">
         <div className="mb-6">
-          <h2 className="text-2xl font-bold mb-2">WHAT I CAN DO FOR YOU</h2>
+          <h2 className=" mb-2 text-4xl font-bold">WHAT I CAN DO FOR YOU</h2>
           <p className="text-sm text-gray-700">
             I design and build robust systems from backend to frontend — ensuring secure APIs,
             scalable databases, and user-focused UIs. Everything I build is structured for adaptability,
@@ -64,6 +64,7 @@ export default function WhatIDo() {
                     className="overflow-hidden border-b border-brand-purple"
                     onClick={() => toggle(index)} // Optional: closes on content click
                   >
+                    
                     <div className="py-2">
                       <ul className=" pl-6 text-sm text-gray-700">
                         {item.content.map((cont, subIndex) => (

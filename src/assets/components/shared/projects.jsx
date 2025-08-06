@@ -1,20 +1,41 @@
 import ProjectCard from "./projectCard";
 import SecondaryBTN from "../shared/secondaryBtn";
+import authImg from '../../images/authentication.jpg';
+import dealershipImg from '../../images/dealership.jpg';
+import databaseImg from '../../images/database.jpg';
+import libraryImg from '../../images/library.jpg';
 
 const projects = [
-  {title:"Authentication",category:'Backend API', url: "projects/url1", imageUrl: '/images/authentication.jpg', 
-    description: "Designed and developed a NodeJS scalable, adaptive authentication API, using JWT, and include security measures like, rate limiting, refresh token"
+  {
+    title: "Authentication",
+    category: 'Backend API',
+    url: "projects/url1",
+    imageUrl: authImg,
+    description: "Designed and developed a NodeJS scalable, adaptive authentication API..."
   },
-  {title: "Dealership",category:'e-Commerce', url: "projects/url2", imageUrl: '/images/dealership.jpg',
-    description: "Designed and developed a full-stack dealership application using React and NodeJS with express" },
-  {title: "Mongo Database Adapter",category:'Database', url: "projects/url3", imageUrl: '/images/database.jpg', 
-    description: "Designed and developed a mongoDB database layer that is also a framework on its own, has methods that can be easily called by any mongodb compatible server without any hard work, its scalable within the framework and it has built with separation of concerns in mind"
+  {
+    title: "Dealership",
+    category: 'e-Commerce',
+    url: "projects/url2",
+    imageUrl: dealershipImg,
+    description: "Designed and developed a full-stack dealership application..."
   },
- {title: "Dummy-Dom Library",category:'Library', url: "projects/url4", imageUrl: '/images/library.jpg',
-  description: "Designed and developed a dom manipulation library, extract away lower level dom operations into functions that takes attributes as arguments"
- },
-//   {title: "Custom Auth System", url: "projects/url", imageUrl: '/images/authentication.jpg'},
+  {
+    title: "Mongo Database Adapter",
+    category: 'Database',
+    url: "projects/url3",
+    imageUrl: databaseImg,
+    description: "Designed and developed a MongoDB database layer..."
+  },
+  {
+    title: "Dummy-Dom Library",
+    category: 'Library',
+    url: "projects/url4",
+    imageUrl: libraryImg,
+    description: "Designed and developed a DOM manipulation library..."
+  }
 ];
+
 
 export default function Projects() {
   return (

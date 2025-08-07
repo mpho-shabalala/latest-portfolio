@@ -6,6 +6,7 @@ import WhatIDo from "../assets/components/unique/whatIDo";
 import Contacts from "../assets/components/shared/contacts";
 import Footer from "../assets/components/shared/footer";
 import LearningJourney from "../assets/components/unique/learningJourney";
+import TechStack from "../assets/components/unique/techStack";
 
 export default function AboutMePage() {
   return (
@@ -16,6 +17,7 @@ export default function AboutMePage() {
         <About/>
         <WhatIDo/>
         <LearningJourney/>
+        <TechStack/>
         <Contacts/>
       </Container>
       <Footer/>

@@ -1,7 +1,7 @@
 
 export const allNavLinks = [
   { name: "Home", path: "/" },
-  { name: "About Me", path: "/about-me" },
+  { name: "About Me", path: "/about" },
   { name: "Projects", path: "/projects" },
   { name: "Skills", path: "/skills" },
   { name: "Experience", path: "/experience" },
@@ -13,7 +13,7 @@ export const allNavLinks = [
 ];
 
 export const headerNavLinks = [ { name: "Home", path: "/" },
-  { name: "About", path: "/about-me" },
+  { name: "About", path: "/about" },
   { name: "Projects", path: "/projects" },
   { name: "Skills", path: "/skills" },]
 

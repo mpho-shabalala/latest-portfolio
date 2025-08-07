@@ -14,7 +14,7 @@ export default function WhatIDo() {
   };
 
   return (
-    <div id='' className="flex flex-col md:flex-row gap-8 px-4 py-10 md:h-screen items-center">
+    <div id='' className="flex flex-col md:flex-row gap-8 px-4 py-10 md:min-h-screen items-center">
       <div className='what-i-do-div w-2/5 hidden md:block'>
         <img src={laptop} alt="Laptop showing work" className="w-full h-auto rounded-xl" />
       </div>

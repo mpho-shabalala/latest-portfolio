@@ -4,5 +4,6 @@ export const journeyData = [
     { course: "Javascript", institution: "Udemy Online" , timeFrame: '2022-2023'},
     { course: "ReactJS & TailwindCSS", institution: "Udemy Online" , timeFrame: '2023-2024'},
     { course: "NodeJS, MySQL & MongoDB", institution: "Udemy Online" , timeFrame: '2023-present'},
+    { course: "Full-stack Web Development ", institution: "FNB App Academy" , timeFrame: '2025-2025'},
     { course: "System Design", institution: "Udemy Online" , timeFrame: '2025-present'},
 ]

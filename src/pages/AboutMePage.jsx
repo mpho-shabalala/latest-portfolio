@@ -7,6 +7,7 @@ import Contacts from "../assets/components/shared/contacts";
 import Footer from "../assets/components/shared/footer";
 import LearningJourney from "../assets/components/unique/learningJourney";
 import TechStack from "../assets/components/unique/techStack";
+import { ContactFormProvider } from "../contexts/contactContext";
 
 export default function AboutMePage() {
   return (
@@ -18,7 +19,9 @@ export default function AboutMePage() {
         <WhatIDo/>
         <LearningJourney/>
         <TechStack/>
-        <Contacts/>
+        <ContactFormProvider>
+          <Contacts/>
+        </ContactFormProvider>
       </Container>
       <Footer/>
     </>

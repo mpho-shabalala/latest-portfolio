@@ -4,10 +4,26 @@ import Input from './input'
 import DropdownInput from './DropdownInput'
 import MessageBox from './messageBox'
 import SecondaryBTN from './secondaryBtn'
+import { useFormContext } from '../../../contexts/contactContext'
 export default function Contacts(){
+    const {loading, submitForm, error, success} = useFormContext()
 
-    const [skill, setSkill] = useState("");
-    const [message, setMessage] = useState("")
+    const [formData, setFormData] = useState({
+        name: '',
+        email:'',
+        message: '',
+        service: ''
+    })
+
+    const handleChange = e => {
+        setFormData(prev => ({...prev, [e.target.name]:e.target.value}))
+    }
+
+    const handleSubmit =  (e) => {
+        e.preventDefault()
+
+        submitForm(formData)
+    }
     return (
         <div className=' md:h-screen flex flex-col md:flex-row items-center'>
             <div className="w-2/5  p-4 pl-0 ">
@@ -20,25 +36,27 @@ export default function Contacts(){
                      action="submit">
                     <div className='flex flex-col md:flex-row justify-between w-full'>
                         <div className='md:mr-2'>
-                        <Input type="text"    label_name="Name" placeholder="John Doe"></Input>
+                        <Input name="name" value={formData.name} onChange={handleChange} type="text"  label_name="Name" placeholder="John Doe"></Input>
                         </div>
-                            <Input  type="text" label_name="Email" placeholder="johndoe@example.com"></Input>
+                        <Input name="email" value={formData.email} onChange={handleChange}  type="text" label_name="Email" placeholder="johndoe@example.com"></Input>
                     </div>
                     <DropdownInput
                         label="Service Needed ?"
-                        options={["UI/UX development", "Backend API development", "System Design", "Database Development"]}
+                        options={["UI/UX web development", "Feature upgrade/addition", "General enquiery", "Collaboration"]}
                         placeholder="Select..."
-                        value={skill}
-                        onChange={setSkill}
+                        name="service"
+                        value={formData.service}
+                        handleChange={handleChange}
                     />
                     <MessageBox
                         label="What Can I Help You..."
-                        value={message}
-                        onChange={setMessage}
+                        value={formData.message}
+                        name="message"
+                        handleChange={handleChange}
                         placeholder="Hello, I'd like to enquire about..."
                     />
                     <div className=' pt-8'>
-                        <SecondaryBTN type='submit' text="SUBMIT"/>
+                        <SecondaryBTN handleSubmit={handleSubmit} loading={loading}  type='submit' text="SUBMIT"/>
                     </div>
                 </form>
             </div>

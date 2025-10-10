@@ -13,7 +13,7 @@ export default function Hero(){
             </div>
             <div className=" md:w-1/3 flex flex-col justify-center -z-10">
                <div className='relative'>
-                 <img id='rounded-2xl w-20 h-20 md:h-full md:w-full md:h-full' src={myImage} alt="" />
+                 <img className='rounded-xl w-20 h-20 md:h-full md:w-full md:h-full' src={myImage} alt="" />
                  <p className='absolute -bottom-10 -left-10 bg-brand-purple  px-8 py-7 rounded-full text-3xl  text-white'>Hi</p>
                </div>
             </div>

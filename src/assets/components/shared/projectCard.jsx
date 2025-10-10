@@ -8,7 +8,6 @@ export default function ProjectCard({ title, url, imageUrl, index, description, 
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    console.log('project: ', url)
     if (inView) setIsActive(true);
     else setIsActive(false);
   }, [inView]);

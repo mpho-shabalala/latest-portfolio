@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mpho-shabalala.github.io/latest-portfolio", 
+  "homepage": "https://mpho-shabalala.github.io/latest-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "firebase": "^12.4.0",
     "framer-motion": "^12.23.6",
     "lucide-react": "^0.525.0",
     "mpho-cli": "^1.0.0",

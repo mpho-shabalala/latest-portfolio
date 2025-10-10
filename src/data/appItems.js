@@ -1,5 +1,13 @@
 export const what_I_do = [
   {
+    title: 'UX / UI (Frontend)',
+    content: [
+      'Focus on user-centric experience and usability',
+      'Build responsive UIs that adapt across devices and viewports',
+      'Intergrate with cloud infrustructure for faster product delivery',
+    ],
+  },
+  {
     title: 'API Design & Development',
     content: [
       'Design and build secure, scalable API endpoints',
@@ -20,12 +28,5 @@ export const what_I_do = [
       'Design with security and performance as first-class concerns',
     ],
   },
-  {
-    title: 'UX / UI (Frontend)',
-    content: [
-      'Focus on user-centric experience and usability',
-      'Build responsive UIs that adapt across devices and viewports',
-      'Design reusable, scalable components that align with system structure',
-    ],
-  },
+  
 ];

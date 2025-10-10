@@ -11,7 +11,7 @@ export default function About(){
       <div  className='md:h-screen w-full flex py-16 md:py-0 px-4 md:px-0 '>
         <div className='w-full md:w-1/2 flex flex-col justify-center' >
           <h1 className='text-6xl font-bold md:font-extrabold mb-6'>ABOUT ME</h1>
-          <p className='leading-relaxed space-y-5 text-lg'>Hi, I'm Mpho  —  A full-stack web developer passionate about building scalable web applications,
+          <p className='leading-relaxed space-y-5 text-lg'>Hi, I'm Mpho  —  A web developer passionate about building user-friendly web applications,
             from input agnostic, secure backend APIs to modern responsive frontend UIs. 
           </p>
                     
@@ -77,7 +77,7 @@ export default function About(){
             </li>
           </ul>
 
-          <SecondaryBTN href="#" text="MY STORY"/>
+          <SecondaryBTN href="/#/about" text="MY STORY"/>
 
         </div>
           <div className=' w-1/2 md:flex-row justify-end items-center hidden md:flex' >

@@ -1,7 +1,7 @@
-export default function JourneyLi({course, institution, timeframe, key}) {
+export default function JourneyLi({course, institution, timeframe}) {
   return (
     <li
-        key={key}
+        // key={index}
     className="flex items-center justify-between  border-b py-4">
         <h2 className=" text-xl font-semibold">{course}</h2>
         <div className="flex flex-col items-end">

@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import myImage from '../../images/my-img.png'
 import Input from './input'
+import Status from './status'
 import DropdownInput from './DropdownInput'
 import MessageBox from './messageBox'
 import SecondaryBTN from './secondaryBtn'
 import { useFormContext } from '../../../contexts/contactContext'
 export default function Contacts(){
     const {loading, submitForm, error, success} = useFormContext()
+    const [status, setStatus] = useState({
+        status:false,
+        statusText: ''
+    })
 
     const [formData, setFormData] = useState({
         name: '',
@@ -19,13 +24,40 @@ export default function Contacts(){
         setFormData(prev => ({...prev, [e.target.name]:e.target.value}))
     }
 
-    const handleSubmit =  (e) => {
+    const handleSubmit =  async (e) => {
         e.preventDefault()
+        if(formData.name == '' ||
+            formData.email == '' ||
+            formData.message == '' ||
+            formData.service == ''){
+                setStatus({status: false, statusText: 'Please fill out every field on the form!!'})
+            return
+        }else await submitForm(formData)
 
-        submitForm(formData)
+        if(loading){
+            setStatus({status:true, statusText: 'Loading, wait a sec!!'})
+        }
+        if(success){
+            // clear form
+            setFormData({name:'', email:'', message:'', service:''});
+            //set success status 
+            setStatus({status: true, statusText: 'Success!!'})
+        }else{
+            //set fail status
+            setStatus({status:false, statusText:'Failed!!'})
+        }
     }
+
+    //clear status after 5 seconds
+        useEffect(() => {
+            setTimeout(() => {
+                setStatus({status: 'false', statusText: ''})
+            }, 10000);
+        }, [status])
+
+
     return (
-        <div className=' md:h-screen flex flex-col md:flex-row items-center'>
+        <div id='/#/contacts' className=' md:h-screen flex flex-col md:flex-row items-center'>
             <div className="w-2/5  p-4 pl-0 ">
                 <img className='rounded-2xl' src={myImage} alt="" />
             </div>
@@ -60,6 +92,7 @@ export default function Contacts(){
                     </div>
                 </form>
             </div>
+            {status.statusText !== ''? <Status status={status.status} statusText={status.statusText} />: ''}
         </div>
     )
 }

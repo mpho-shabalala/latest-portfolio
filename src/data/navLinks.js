@@ -15,6 +15,7 @@ export const allNavLinks = [
 export const headerNavLinks = [ { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Projects", path: "/projects" },
-  { name: "Skills", path: "/skills" },]
+  { name: "Blogs", path: "/blogs" },
+]
 
 // export default {allNavLinks, headerNavLinks}

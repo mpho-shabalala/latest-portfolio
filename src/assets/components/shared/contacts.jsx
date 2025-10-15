@@ -57,7 +57,7 @@ export default function Contacts(){
 
 
     return (
-        <div id='/#/contacts' className=' md:h-screen flex flex-col md:flex-row items-center'>
+        <div id='contacts' className=' md:h-screen flex flex-col md:flex-row items-center'>
             <div className="w-2/5  p-4 pl-0 ">
                 <img className='rounded-2xl' src={myImage} alt="" />
             </div>

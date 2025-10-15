@@ -41,12 +41,12 @@ export default function Header() {
           ))}
         </ul>
 
-        <NavLink
-          to={'/contacts'}
+        <a
+          href='#contacts'
           className='dark-header-nav-link ml-2'
         >
           Contact
-        </NavLink>
+        </a>
         <p className="md:hidden">Available for work</p>
         <div onClick={toggleMenu} className={` md:hidden dark:text-gray-100 bg-brand-purple text-white rounded-full px-4 py-2 cursor-pointer`}>
           

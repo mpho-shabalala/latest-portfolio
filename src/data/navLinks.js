@@ -8,7 +8,7 @@ export const allNavLinks = [
   { name: "Education", path: "/education" },
   { name: "Certifications", path: "/certifications" },
   { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contact", path: "/contacts" },
   { name: "Resume", path: "/resume" }, 
 ];
 

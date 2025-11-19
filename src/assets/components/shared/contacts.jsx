@@ -5,6 +5,8 @@ import Status from './status'
 import DropdownInput from './DropdownInput'
 import MessageBox from './messageBox'
 import SecondaryBTN from './secondaryBtn'
+import ReCAPTCHA from "react-google-recaptcha";
+
 import { useFormContext } from '../../../contexts/contactContext'
 export default function Contacts(){
     const {loading, submitForm, error, success} = useFormContext()
@@ -87,7 +89,11 @@ export default function Contacts(){
                         handleChange={handleChange}
                         placeholder="Hello, I'd like to enquire about..."
                     />
-                    <div className=' pt-8'>
+                    <ReCAPTCHA
+                        sitekey='6Ld8Pf0rAAAAAKKV_0V79cl1yrXNaxoLsmBkxApF'
+                        onChange={(value) => setRecaptchaValue(value)}
+                    />
+                    <div className='pt-8'>
                         <SecondaryBTN handleSubmit={handleSubmit} loading={loading}  type='submit' text="SUBMIT"/>
                     </div>
                 </form>

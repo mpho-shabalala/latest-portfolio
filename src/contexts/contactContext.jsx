@@ -10,11 +10,7 @@ const ContactFormProvider = ({children}) => {
     const [success, setSuccess] = useState(false)
 
     const submitForm = async (data, collectionName = 'enquieries') => {
-        console.log(data)
         setLoading(true)
-        setError(null)
-        setSuccess(false)
-
         try{
             const docRef = await addDoc(
                 collection(db, collectionName), 

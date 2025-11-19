@@ -18,9 +18,8 @@ module.exports = {
       maxWidth: {
         'container': '1100px'
       }
-      
-      
   }
 },
-  plugins: [],
+  // plugins: [require('@tailwindcss/typography')],
+
 };

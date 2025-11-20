@@ -90,7 +90,7 @@ export default function Contacts(){
                         placeholder="Hello, I'd like to enquire about..."
                     />
                     <ReCAPTCHA
-                        sitekey='6Ld8Pf0rAAAAAKKV_0V79cl1yrXNaxoLsmBkxApF'
+                        sitekey={'6Ld8Pf0rAAAAAKKV_0V79cl1yrXNaxoLsmBkxApF'}
                         onChange={(value) => setRecaptchaValue(value)}
                     />
                     <div className='pt-8'>

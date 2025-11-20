@@ -7,6 +7,7 @@ export default function CurrentBlog() {
   const { currBlog, blogs } = useBlogs();
   useEffect(() => {
     console.log(blogs);
+    console.log(currBlog)
   })
   if (!currBlog) {
     return <div className="pt-16 text-center text-gray-500">Loading blog...</div>;
@@ -30,8 +31,8 @@ export default function CurrentBlog() {
       {currBlog.images && currBlog.images.length > 0 && (
         <img
           className="rounded-2xl mt-10 w-full"
-          src={currBlog.images[0]}
-          alt={currBlog.title}
+          src={currBlog.images[0].img}
+          alt={currBlog.images[0].alt}
         />
       )}
 

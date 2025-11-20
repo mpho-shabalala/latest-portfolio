@@ -7,8 +7,8 @@ export default function BlogCard({blog}) {
         {blog.images && blog.images.length > 0 && (
           <img
             className="rounded-2xl mt-10 w-full h-72"
-            src={blog.images[0]}
-            alt={blog.title}
+            src={blog.images[0].img}
+            alt={blog.images[0].alt}
           />
         )}
 

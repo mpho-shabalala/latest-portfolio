@@ -52,8 +52,10 @@ export default function Contacts() {
             return
         }
 
+        //backend captcha url endpoint
+        const captchaUrl = 'https://us-central1-my-portfolio-637e8.cloudfunctions.net/api/verify-captcha';
         // SEND FORM DATA + CAPTCHA TOKEN
-        await submitForm({ ...formData, recaptchaToken })
+        await submitForm({formData: { ...formData }, recaptchaToken, captchaUrl, collectionName :'enquieries' })
 
         if (loading) {
             setStatus({ status: true, statusText: 'Loading, wait a sec!!' })
@@ -130,7 +132,7 @@ export default function Contacts() {
                         placeholder="Hello, I'd like to enquire about..."
                     />
 
-                    <ReCAPTCHA
+                    <ReCAPTCHA className='pt-8'
                         sitekey={'6LcHBx4sAAAAAFDjVAdmD-JiIeE24QmJB3cHOk0H'}
                         onChange={(value) => setRecaptchaToken(value)}
                     />
